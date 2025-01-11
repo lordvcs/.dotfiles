@@ -5,8 +5,8 @@
 
 ## Commands
 
-Sync all: `stow */`
-Sync one, eg git: `stow git`
-Remove link: `stow -D git`
+1. Sync all: `stow */`
+2. Sync one, eg git: `stow git`
+3. Remove link: `stow -D git`
 
 Reference: [https://apiumhub.com/tech-blog-barcelona/managing-dotfiles-with-stow/](https://apiumhub.com/tech-blog-barcelona/managing-dotfiles-with-stow/)
