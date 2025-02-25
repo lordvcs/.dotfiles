@@ -13,7 +13,7 @@ return {
 		{ "<leader>FR", "<cmd>FlutterReload<cr>", desc = "Flutter Reload" },
 		{ "<leader>FS", "<cmd>FlutterRestart<cr>", desc = "Flutter Restart" },
 		{ "<leader>Fq", "<cmd>FlutterQuit<cr>", desc = "Flutter Quit" },
-		{ "<leader>Fl", "<cmd>vsplit _FLUTTER_DEV_LOG_<cr>", desc = "Flutter Logs" },
+		{ "<leader>Fl", "<cmd>FlutterLogToggle<cr>", desc = "Flutter Logs" },
 		{
 			"<leader>Fa",
 			function()
