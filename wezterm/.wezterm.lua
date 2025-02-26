@@ -47,10 +47,13 @@ local config = {}
 if wezterm.config_builder then
 	config = wezterm.config_builder()
 end
+-- config.enable_csi_u_key_encoding = true
+-- config.send_composed_key_when_left_alt_is_pressed = false
+-- config.send_composed_key_when_right_alt_is_pressed = false
 
 local mux = wezterm.mux
 wezterm.on("gui-startup", function(cmd)
-	local tab, pane, window = mux.spawn.window(cmd or {})
+	local tab, pane, window = mux.spawn_window(cmd or {})
 	window:gui_window():maximize()
 end)
 
@@ -68,28 +71,34 @@ config.window_padding = {
 }
 
 -- tmux
+-- config.disable_default_key_bindings = true
 config.leader = { key = "q", mods = "ALT", timeout_milliseconds = 2000 }
 config.keys = {
 	-- {
-	--     mods = "LEADER",
-	--     key = "c",
-	--     action = wezterm.action.SpawnTab "CurrentPaneDomain",
+	-- 	key = "T",
+	-- 	mods = "CTRL|SHIFT",
+	-- 	action = wezterm.action.SpawnTab("CurrentPaneDomain"),
+	-- },
+	-- {
+	-- 	key = "W",
+	-- 	mods = "CTRL|SHIFT",
+	-- 	action = wezterm.action.CloseCurrentTab({ confirm = true }),
+	-- },
+	-- {
+	-- 	mods = "CTRL",
+	-- 	key = "Tab",
+	-- 	action = wezterm.action.ActivateTabRelative(-1),
+	-- },
+	-- {
+	-- 	mods = "CTRL|SHIFT",
+	-- 	key = "Tab",
+	-- 	action = wezterm.action.ActivateTabRelative(1),
 	-- },
 	{
 		mods = "LEADER",
 		key = "x",
 		action = wezterm.action.CloseCurrentPane({ confirm = true }),
 	},
-	-- {
-	--     mods = "LEADER",
-	--     key = "b",
-	--     action = wezterm.action.ActivateTabRelative(-1)
-	-- },
-	-- {
-	--     mods = "LEADER",
-	--     key = "n",
-	--     action = wezterm.action.ActivateTabRelative(1)
-	-- },
 	{
 		mods = "LEADER",
 		key = "|",
@@ -140,17 +149,29 @@ config.keys = {
 		key = "UpArrow",
 		action = wezterm.action.AdjustPaneSize({ "Up", 5 }),
 	},
+	-- {
+	-- 	key = "N",
+	-- 	mods = "CTRL|SHIFT",
+	-- 	action = wezterm.action.DisableDefaultAssignment,
+	-- },
+	-- {
+	-- 	key = "P",
+	-- 	mods = "CTRL|SHIFT",
+	-- 	action = wezterm.action.DisableDefaultAssignment,
+	-- },
 	{
-		key = "N",
+		key = "p",
 		mods = "CTRL|SHIFT",
-		action = wezterm.action.DisableDefaultAssignment,
+		action = wezterm.action.SendString("\x10"), -- This sends Ctrl+P with Shift modifier
 	},
 	{
-		key = "P",
+		key = "n",
 		mods = "CTRL|SHIFT",
-		action = wezterm.action.DisableDefaultAssignment,
+		action = wezterm.action.SendString("\x0e"), -- This sends Ctrl+P with Shift modifier
 	},
 }
+-- config.enable_kitty_keyboard = true
+-- config.allow_win32_input_mode = false
 
 for i = 0, 9 do
 	-- leader + number to activate that tab
