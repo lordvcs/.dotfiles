@@ -5,4 +5,5 @@ return {
 	{ import = "lazyvim.plugins.extras.lang.docker" },
 	{ import = "lazyvim.plugins.extras.editor.snacks_picker" },
 	{ import = "lazyvim.plugins.extras.coding.mini-surround" },
+	{ import = "lazyvim.plugins.extras.formatting.prettier" },
 }
