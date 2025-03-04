@@ -170,6 +170,48 @@ config.keys = {
 		action = wezterm.action.SendString("\x0e"), -- This sends Ctrl+P with Shift modifier
 	},
 }
+-- COPY MODE --start
+config.key_tables = {
+	copy_mode = {
+		{ key = "Escape", mods = "NONE", action = wezterm.action({ CopyMode = "Close" }) },
+		{ key = "h", mods = "NONE", action = wezterm.action({ CopyMode = "MoveLeft" }) },
+		{ key = "j", mods = "NONE", action = wezterm.action({ CopyMode = "MoveDown" }) },
+		{ key = "k", mods = "NONE", action = wezterm.action({ CopyMode = "MoveUp" }) },
+		{ key = "l", mods = "NONE", action = wezterm.action({ CopyMode = "MoveRight" }) },
+		{
+			key = "V",
+			mods = "SHIFT",
+			action = wezterm.action.CopyMode({ SetSelectionMode = "Line" }),
+		},
+		{
+			key = "v",
+			mods = "NONE",
+			action = wezterm.action.CopyMode({ SetSelectionMode = "Cell" }),
+		},
+		{
+			key = "y",
+			mods = "NONE",
+			action = wezterm.action.Multiple({
+				{ CopyTo = "ClipboardAndPrimarySelection" },
+				wezterm.action.ClearSelection,
+				wezterm.action.CopyMode("ClearSelectionMode"),
+			}),
+		},
+		-- Enter search mode to edit the pattern.
+		-- When the search pattern is an empty string the existing pattern is preserved
+		{ key = "/", mods = "NONE", action = wezterm.action({ Search = { CaseSensitiveString = "" } }) },
+		-- navigate any search mode results
+		{ key = "n", mods = "NONE", action = wezterm.action({ CopyMode = "NextMatch" }) },
+		{ key = "N", mods = "SHIFT", action = wezterm.action({ CopyMode = "PriorMatch" }) },
+	},
+	search_mode = {
+		{ key = "Escape", mods = "NONE", action = wezterm.action({ CopyMode = "Close" }) },
+		-- Go back to copy mode when pressing enter, so that we can use unmodified keys like "n"
+		-- to navigate search results without conflicting with typing into the search area.
+		{ key = "Enter", mods = "NONE", action = "ActivateCopyMode" },
+	},
+}
+-- COPY MODE --end
 -- config.enable_kitty_keyboard = true
 -- config.allow_win32_input_mode = false
 
