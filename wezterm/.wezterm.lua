@@ -323,26 +323,26 @@ config.window_padding = {
 -- config.disable_default_key_bindings = true
 config.leader = { key = "q", mods = "ALT", timeout_milliseconds = 2000 }
 config.keys = {
-	-- {
-	-- 	key = "T",
-	-- 	mods = "CTRL|SHIFT",
-	-- 	action = wezterm.action.SpawnTab("CurrentPaneDomain"),
-	-- },
-	-- {
-	-- 	key = "W",
-	-- 	mods = "CTRL|SHIFT",
-	-- 	action = wezterm.action.CloseCurrentTab({ confirm = true }),
-	-- },
-	-- {
-	-- 	mods = "CTRL",
-	-- 	key = "Tab",
-	-- 	action = wezterm.action.ActivateTabRelative(-1),
-	-- },
-	-- {
-	-- 	mods = "CTRL|SHIFT",
-	-- 	key = "Tab",
-	-- 	action = wezterm.action.ActivateTabRelative(1),
-	-- },
+	{
+		key = "T",
+		mods = "CTRL|SHIFT",
+		action = wezterm.action.SpawnTab("CurrentPaneDomain"),
+	},
+	{
+		key = "W",
+		mods = "CTRL|SHIFT",
+		action = wezterm.action.CloseCurrentTab({ confirm = false }),
+	},
+	{
+		mods = "CTRL",
+		key = "Tab",
+		action = wezterm.action.ActivateTabRelative(1),
+	},
+	{
+		mods = "CTRL|SHIFT",
+		key = "Tab",
+		action = wezterm.action.ActivateTabRelative(-1),
+	},
 	{
 		mods = "LEADER",
 		key = "x",

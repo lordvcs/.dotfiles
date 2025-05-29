@@ -7,7 +7,7 @@ return {
 	},
 	config = true,
 	keys = {
-		{ "<leader>Fr", "<cmd>FlutterRun<cr>", desc = "Flutter Run" },
+		{ "<leader>Fr", "<cmd>FlutterDebug<cr>", desc = "Flutter Run" },
 		{ "<leader>Fd", "<cmd>FlutterDevices<cr>", desc = "Flutter Devices" },
 		{ "<leader>Fe", "<cmd>FlutterEmulators<cr>", desc = "Flutter Emulators" },
 		{ "<leader>FR", "<cmd>FlutterReload<cr>", desc = "Flutter Reload" },
