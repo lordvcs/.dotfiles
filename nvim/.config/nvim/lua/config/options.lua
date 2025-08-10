@@ -12,3 +12,4 @@ opt.shiftwidth = 4 -- Number of spaces inserted when indenting
 
 -- Set to "ruff_lsp" to use the old LSP implementation version.
 -- vim.g.lazyvim_python_ruff = "ruff"
+vim.g.root_spec = { { ".git", "lua" }, "lsp", "cwd" }
