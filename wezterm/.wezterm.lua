@@ -308,7 +308,7 @@ end)
 
 -- For example, changing the color scheme:
 config.color_scheme = "Catppuccin Macchiato"
-config.font = wezterm.font("Fira Code")
+config.font = wezterm.font("FiraCode Nerd Font")
 config.font_size = 12
 
 config.window_decorations = "RESIZE"
