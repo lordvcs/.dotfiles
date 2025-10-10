@@ -1,0 +1,159 @@
+[
+    {
+        "input_combination": [
+            {
+                "type": 1,
+                "code": 464,
+                "origin_hash": "a3e5f6e6c4a0a2b6391eade73fb92948"
+            }
+        ],
+        "target_uinput": "keyboard",
+        "output_symbol": "Control_L",
+        "mapping_type": "key_macro"
+    },
+    {
+        "input_combination": [
+            {
+                "type": 1,
+                "code": 29,
+                "origin_hash": "a3e5f6e6c4a0a2b6391eade73fb92948"
+            }
+        ],
+        "target_uinput": "keyboard",
+        "output_symbol": "KEY_FN",
+        "mapping_type": "key_macro"
+    },
+    {
+        "input_combination": [
+            {
+                "type": 1,
+                "code": 56,
+                "origin_hash": "a3e5f6e6c4a0a2b6391eade73fb92948"
+            }
+        ],
+        "target_uinput": "keyboard",
+        "output_symbol": "Super_L",
+        "mapping_type": "key_macro"
+    },
+    {
+        "input_combination": [
+            {
+                "type": 1,
+                "code": 125,
+                "origin_hash": "a3e5f6e6c4a0a2b6391eade73fb92948"
+            }
+        ],
+        "target_uinput": "keyboard",
+        "output_symbol": "Alt_L",
+        "mapping_type": "key_macro"
+    },
+    {
+        "input_combination": [
+            {
+                "type": 1,
+                "code": 100,
+                "origin_hash": "a3e5f6e6c4a0a2b6391eade73fb92948"
+            }
+        ],
+        "target_uinput": "keyboard",
+        "output_symbol": "Alt_R",
+        "mapping_type": "key_macro"
+    },
+    {
+        "input_combination": [
+            {
+                "type": 1,
+                "code": 126,
+                "origin_hash": "a3e5f6e6c4a0a2b6391eade73fb92948"
+            }
+        ],
+        "target_uinput": "keyboard",
+        "output_symbol": "Super_R",
+        "mapping_type": "key_macro"
+    },
+    {
+        "input_combination": [
+            {
+                "type": 1,
+                "code": 464,
+                "origin_hash": "a3e5f6e6c4a0a2b6391eade73fb92948"
+            },
+            {
+                "type": 1,
+                "code": 28,
+                "origin_hash": "a3e5f6e6c4a0a2b6391eade73fb92948"
+            }
+        ],
+        "target_uinput": "keyboard",
+        "output_symbol": "Control_L+Return",
+        "mapping_type": "key_macro"
+    },
+    {
+        "input_combination": [
+            {
+                "type": 1,
+                "code": 464,
+                "origin_hash": "a3e5f6e6c4a0a2b6391eade73fb92948"
+            },
+            {
+                "type": 1,
+                "code": 102,
+                "origin_hash": "a3e5f6e6c4a0a2b6391eade73fb92948"
+            }
+        ],
+        "target_uinput": "keyboard",
+        "output_symbol": "Control_L+Left",
+        "mapping_type": "key_macro"
+    },
+    {
+        "input_combination": [
+            {
+                "type": 1,
+                "code": 464,
+                "origin_hash": "a3e5f6e6c4a0a2b6391eade73fb92948"
+            },
+            {
+                "type": 1,
+                "code": 107,
+                "origin_hash": "a3e5f6e6c4a0a2b6391eade73fb92948"
+            }
+        ],
+        "target_uinput": "keyboard",
+        "output_symbol": "Control_L+Right",
+        "mapping_type": "key_macro"
+    },
+    {
+        "input_combination": [
+            {
+                "type": 1,
+                "code": 464,
+                "origin_hash": "a3e5f6e6c4a0a2b6391eade73fb92948"
+            },
+            {
+                "type": 1,
+                "code": 103,
+                "origin_hash": "a3e5f6e6c4a0a2b6391eade73fb92948"
+            }
+        ],
+        "target_uinput": "keyboard",
+        "output_symbol": "Control_L+Up",
+        "mapping_type": "key_macro"
+    },
+    {
+        "input_combination": [
+            {
+                "type": 1,
+                "code": 464,
+                "origin_hash": "a3e5f6e6c4a0a2b6391eade73fb92948"
+            },
+            {
+                "type": 1,
+                "code": 108,
+                "origin_hash": "a3e5f6e6c4a0a2b6391eade73fb92948"
+            }
+        ],
+        "target_uinput": "keyboard",
+        "output_symbol": "Control_L+Down",
+        "mapping_type": "key_macro"
+    }
+]
