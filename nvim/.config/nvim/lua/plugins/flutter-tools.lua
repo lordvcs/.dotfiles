@@ -5,7 +5,32 @@ return {
 		"nvim-lua/plenary.nvim",
 		"stevearc/dressing.nvim", -- optional for vim.ui.select
 	},
-	config = true,
+	opts = {
+		-- Add default flavor argument for local development
+		flutter_path = nil, -- uses system flutter
+		fvm = false,
+		widget_guides = { enabled = true },
+		closing_tags = {
+			highlight = "Comment",
+			prefix = "// ",
+			enabled = true,
+		},
+		dev_log = {
+			enabled = true,
+			notify_errors = false,
+		},
+		lsp = {
+			color = { enabled = true },
+			settings = {
+				showTodos = true,
+				completeFunctionCalls = true,
+				renameFilesWithClasses = "prompt",
+				enableSnippets = true,
+			},
+		},
+		-- Set default flavor to 'local' for medcare project
+		default_run_args = { flutter = "--flavor local" },
+	},
 	keys = {
 		{ "<leader>Fd", "<cmd>FlutterDebug<cr>", desc = "Flutter Debug" },
 		{ "<leader>Fr", "<cmd>FlutterRun<cr>", desc = "Flutter Run" },
