@@ -6,7 +6,7 @@ return {
 		"stevearc/dressing.nvim", -- optional for vim.ui.select
 	},
 	opts = {
-		-- Add default flavor argument for local development
+		-- Add default flavor argument for dev development
 		flutter_path = nil, -- uses system flutter
 		fvm = false,
 		widget_guides = { enabled = true },
@@ -28,8 +28,11 @@ return {
 				enableSnippets = true,
 			},
 		},
-		-- Set default flavor to 'local' for medcare project
-		default_run_args = { flutter = "--flavor local" },
+		-- Set default flavor to 'dev' for medcare project.
+		-- --dart-define-from-file is required so String.fromEnvironment(...) in
+		-- lib/core/services/environment_service.dart resolves CONVEX_URL etc.
+		-- Without it the Convex client errors with "relative URL without a base".
+		default_run_args = { flutter = "--flavor dev --dart-define-from-file=config/dev.json" },
 	},
 	keys = {
 		{ "<leader>Fd", "<cmd>FlutterDebug<cr>", desc = "Flutter Debug" },

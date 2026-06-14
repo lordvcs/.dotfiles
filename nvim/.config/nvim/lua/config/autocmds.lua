@@ -1,0 +1,6 @@
+-- vim.api.nvim_create_autocmd("FileType", {
+--   pattern = { "markdown", "markdown.mdx" },
+--   callback = function(args)
+--     vim.diagnostic.enable(false, { bufnr = args.buf })
+--   end,
+-- })
